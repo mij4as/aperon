@@ -1,0 +1,102 @@
+<style>
+	.partners-footer {
+		background: #2e1058;
+		height: 95px;
+		padding-top: 17px;
+	}
+
+	.customNavigation {
+		float: left;
+		display: inline-block;
+	}
+
+	.customNavigation .swiper-button-prev-unique {
+		margin-right: 15px;
+	}
+
+	.customNavigation .swiper-button-prev-unique,
+	.customNavigation .swiper-button-next-unique {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.swiper-button-prev-unique {
+		width: 50px;
+		height: 60px;
+		background: #fff;
+		transition: all 0.5s ease-in-out;
+		line-height: 60px;
+		text-align: center;
+		font-size: 31px;
+		color: #2e1058;
+		display: block;
+	}
+
+	.swiper-button-prev-unique:before {
+		width: 0;
+		height: 0;
+		border-top: 60px solid #fff;
+		border-right: 10px solid transparent;
+		content: '';
+		position: absolute;
+		left: 98%;
+		top: 0;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.customNavigation .swiper-button-prev-unique,
+	.customNavigation .swiper-button-next-unique {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.swiper-button-next-unique {
+		width: 50px;
+		height: 60px;
+		background: #fff;
+		color: #2e1058;
+		line-height: 60px;
+		text-align: center;
+		font-size: 31px;
+		display: block;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.swiper-button-next-unique:before {
+		width: 0;
+		height: 0;
+		border-bottom: 60px solid #fff;
+		border-left: 10px solid transparent;
+		content: '';
+		position: absolute;
+		right: 98%;
+		top: 0;
+		transition: all 0.5s ease-in-out;
+	}
+</style>
+<div class="partners-footer">
+	<div class="container">
+		<div class="customNavigation">
+			<a class="swiper-button-prev-unique">
+				<i class="far fa-angle-left"></i>
+			</a>
+			<a class="swiper-button-next-unique">
+				<i class="far fa-angle-right"></i>
+			</a>
+		</div>
+	</div>
+</div>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		pagination: {
+			el: '.swiper-pagination-unique',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next-unique',
+			prevEl: '.swiper-button-prev-unique',
+		},
+	});
+</script>
